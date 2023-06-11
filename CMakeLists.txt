@@ -3,4 +3,4 @@ project(first)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(first main.cpp)
+add_executable(first main.cpp B_Tree.cpp B_Tree.h)

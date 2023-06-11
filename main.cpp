@@ -164,45 +164,6 @@ public:
     }
 };
 
-class B_Tree{
-    struct Element{
-        int info;
-        B_Tree* left;
-        B_Tree* right;
-    } *element;
-public:
-    B_Tree(){
-        element = NULL;
-    }
-    void stright_create(){
-        int a;
-        cin >> a;
-        if(a == 0){
-            element = NULL;
-            return;
-        }
-        element = new Element;
-        element->info = a;
-        element->left = new B_Tree;
-        element->right = new B_Tree;
-        element->left->stright_create();
-        element->right->stright_create();
-    }
-    void symetric_create(){}
-    void stright_print(){
-        if(element == NULL){
-            cout << "0 "; // за бажанням
-            return;
-        }
-        cout << element->info << " ";
-        element->left->stright_print();
-        //element->right = NULL;
-        element->right->stright_print();
-    }
-    void symetric_print(){}
-    void reverse_print(){}
-};
-
 
 
 int main() {
@@ -210,8 +171,8 @@ int main() {
     Stack stack;
     Queue queue;
     List l;
-    B_Tree tree;
-    /*l.add_element(1,0);
+
+    l.add_element(1,0);
     l.add_element(2,1);
     l.add_element(3,2);
     cout << "List: ";
@@ -244,12 +205,12 @@ int main() {
     queue.push(2);
     queue.push(3);
     queue.push(4);
-    queue.print();*/
+    queue.print();
 
 
-    tree.stright_create();
+
+
 
     //1 2 4 7 0 0 8 0 0 5 0 0 3 0 6 0 0
 
-    return 0;
 }
